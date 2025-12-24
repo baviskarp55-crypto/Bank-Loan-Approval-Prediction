@@ -1,0 +1,118 @@
+Bank Loan Approval Prediction
+
+This project is about predicting whether a bank should approve a loan application or not.
+I built it using Logistic Regression, focusing on a clean workflow, clear logic, and practical evaluation rather than just model accuracy.
+
+The idea is simple: given a customer’s basic financial and employment details, the model predicts Approved (1) or Not Approved (0).
+
+Why I built this:
+
+Loan approval is a real-world problem where decisions matter.
+I wanted to practice:
+
+Turning raw data into usable features
+
+Building a full ML pipeline from scratch
+
+Explaining model results in a way that makes business sense
+
+This project helped me understand how classification models behave beyond just numbers.
+
+What data is used
+
+The dataset contains 500 customer records with these features:
+
+Age
+
+Income
+
+Credit Score
+
+Employment Status (Salaried, Self-employed, Unemployed)
+
+The target column is:
+
+Approved → 1 for approved, 0 for rejected
+
+The data is clean and has no missing values.
+
+How the project works
+
+Here’s the flow I followed:
+
+Loaded and explored the dataset to understand distributions
+
+Encoded employment status into numeric form
+
+Selected relevant features
+
+Split data into training and testing sets
+
+Scaled features using StandardScaler
+
+Trained a Logistic Regression model
+
+Evaluated results using multiple metrics
+
+Plotted ROC curve and calculated AUC
+
+Created a reusable prediction function
+
+Everything is kept simple and readable.
+
+Model performance (honest results)
+
+Accuracy: 62%
+
+Precision: 62%
+
+Recall: 65%
+
+F1 Score: 63%
+
+AUC Score: 0.71
+
+This isn’t a “perfect” model and that’s okay.
+The AUC score shows the model can reasonably separate approved and rejected loans, which is more important than chasing high accuracy on a small dataset.
+
+Example prediction
+predict_loan(35, 190000, 800, "Salaried")
+
+
+Output:
+
+Loan Approved
+Probability: 0.88
+
+predict_loan(55, 30000, 500, "Unemployed")
+
+
+Output:
+
+Loan Not Approved
+Probability: 0.12
+
+Tools and libraries
+
+Python
+
+Pandas & NumPy
+
+Matplotlib & Seaborn
+
+Scikit-learn
+
+What I learned from this project
+
+How feature scaling impacts Logistic Regression
+
+Why precision and recall matter in business decisions
+
+How to interpret confusion matrices properly
+
+How to explain ML results in plain language
+
+About me
+
+I’m a data analytics fresher building hands-on projects to strengthen my fundamentals in Python, statistics, and machine learning.
+This project is part of that learning journey.
